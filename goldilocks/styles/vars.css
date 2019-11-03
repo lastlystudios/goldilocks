@@ -1,0 +1,17 @@
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+::-moz-selection {
+  background-color: #111;
+  color: #f8f8f8;
+}
+::selection {
+  background-color: #111;
+  color: #f8f8f8;
+}

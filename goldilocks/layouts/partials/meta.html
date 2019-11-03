@@ -1,0 +1,10 @@
+<meta name="description" content="{{ .Params.meta_description | default .Site.Params.homepage_meta_tags.meta_description }}" />
+<meta property="og:description" content="{{ .Params.meta_description | default .Site.Params.homepage_meta_tags.meta_description }}" />
+<meta property="og:title" content="{{ .Params.meta_title | default .Site.Params.homepage_meta_tags.meta_og_title }}" />
+<meta property="og:url" content="{{ .Params.meta_url | default .Site.Params.homepage_meta_tags.meta_og_url }}" />
+<meta name="twitter:site" content="{{ .Params.meta_url | default .Site.Params.homepage_meta_tags.meta_twitter_site }}" />
+<meta property="og:image" content="{{ .Params.meta_image | default .Site.Params.homepage_meta_tags.meta_og_image }}" />
+<meta name="twitter:creator" content="{{ .Params.meta_twitter_user | default .Site.Params.homepage_meta_tags.meta_twitter_creator }}" />
+<meta name="twitter:card" content="{{ .Params.meta_twitter_card | default .Site.Params.homepage_meta_tags.meta_twitter_card }}" />
+<meta property="og:type" content="{{ .Params.meta_type | default .Site.Params.homepage_meta_tags.meta_og_type }}" />
+<link rel="canonical" href="{{ .Params.canonical_link | default .Permalink }}" />

@@ -1,0 +1,128 @@
+//
+// GOLDILOCKS MIXINS
+// By: Tyler Lastovich
+//
+
+
+// Easy sizing
+smaller-than(size)
+  condition = 'screen and (max-width: %s)' % size
+  @media condition
+    {block}
+
+larger-than(size)
+  condition = 'screen and (min-width: %s)' % size
+  @media condition
+    {block}
+
+mobile()
+  condition = 'screen and (max-width: %s)' % medium
+  @media condition
+    {block}
+
+.desktop-only
+  +mobile()
+    display none !important
+
+.mobile-only
+  +larger-than(small)
+    display none !important
+
+caps()
+  text-transform uppercase
+  font-feature-settings: 'case' 1
+
+
+// Easier flexboxes
+flex-row()
+  display flex
+  flex-flow row
+
+flex-col()
+  display flex
+  flex-flow column
+
+flex-col-middle()
+  display flex
+  flex-flow column
+  align-items center
+
+flex-col-centered()
+  display flex
+  flex-flow column
+  align-items center
+  justify-content center
+
+flex-row-middle()
+  display flex
+  flex-flow row
+  align-items center
+
+flex-row-centered()
+  display flex
+  flex-flow row
+  align-items center
+  justify-content center
+
+
+// Object fit for images
+cover-top()
+  object-fit cover
+  object-position 50% 0
+
+cover-center()
+  object-fit cover
+  object-position 50% 50%
+
+fill-top()
+  object-fit fill
+  object-position 50% 0
+
+fill-center()
+  object-fit fill
+  object-position 50% 50%
+
+
+// Stroke text
+knockout-thick()
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: @color;
+
+knockout-thin()
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: @color;
+
+knockout(fill, stroke, width)
+  -webkit-text-fill-color: fill;
+  -webkit-text-stroke-width: width;
+  -webkit-text-stroke-color: stroke;
+
+
+// Special features for Inter.  ** Can only be used one at a time **
+number()
+  font-feature-settings: 'tnum' 1
+
+fraction()
+  font-feature-settings: 'frac' 1
+
+superscript()
+  font-feature-settings: 'sups' 1
+
+superscript()
+  font-feature-settings: 'subs' 1
+
+fancy-number()
+  font-feature-settings: 'ss01' 1
+  font-feature-settings: 'tnum' 1
+
+inter-reset()
+  font-feature-settings normal
+
+// box-shadow for better border animations
+box-border(color, width)
+  box-shadow: 0 0 0 width color;
+
+box-border-reset()
+  box-shadow: 0 0 0 0 transparent;

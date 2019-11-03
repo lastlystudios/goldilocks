@@ -1,0 +1,45 @@
+// Many is not all of these vars will be over-ridden by your installed theme
+
+// DEFAULT FONTS
+// Inter is the bomb, make it default
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+primary-font = 'Inter', sans-serif
+primary-font-variable = 'Inter var', sans-serif
+
+
+// DEFAULT COLORS
+// Darks
+primary-dark = #111111
+mid-dark = #999999
+// Lights
+primary-light = #F8F8F8
+mid-light = #666666
+
+
+// DEFAULT BREAKPOINTS
+massive = 2500px
+large = 1200px
+medium = 800px
+small = 450px
+// add aliases for stupid-proofing
+uhd = massive
+monitor = massive
+desktop = large
+laptop = large
+tablet = medium
+mobile = small
+phone = small
+
+
+// DEFAULT SELECTION
+::-moz-selection
+  background-color primary-dark
+  color primary-light
+::selection
+  background-color primary-dark
+  color primary-light
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>
+        {{ block "title" . }}
+            {{ .Title }} - {{ .Site.Title }}
+        {{ end }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ block "meta_tags" . }}
+        {{ partial "meta.html" . }}
+    {{end}}
+
+    <link rel="icon" href="{{ .Site.BaseURL }}favicon-32x32.png">
+    <link href='{{ "/css/style.css" | urlize | relURL }}' rel="stylesheet">
+
+    {{ block "header_css" . }}{{ end }}
+</head>
+
+<body>
+{{ partial "nav.html" . }}
+
+{{ block "main" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}
+{{ block "footer_js" . }}
+{{ end }}
+
+{{ partial "google-analytics.html" . }}
+</body>
+
+</html>
